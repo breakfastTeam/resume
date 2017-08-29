@@ -2,6 +2,8 @@ package com.smartbean.entity;
 
 import com.smartbean.entity.base.BaseEntity;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
@@ -23,6 +25,8 @@ public class ResumeDetailEducationExperience extends BaseEntity implements java.
 	private String majorName;//专业名称
 	private String majorDesc;//专业描述
 	private String degree;//学历
+
+	private ResumeDetail resumeDetail;
 
 
 	// Property accessors
@@ -91,5 +95,16 @@ public class ResumeDetailEducationExperience extends BaseEntity implements java.
 
 	public void setDegree(String degree) {
 		this.degree = degree;
+	}
+
+	@ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+	@JoinColumn(name = "resume_id", referencedColumnName = "ID", insertable = false, updatable = false, nullable = true)
+	@NotFound(action= NotFoundAction.IGNORE)
+	public ResumeDetail getResumeDetail() {
+		return resumeDetail;
+	}
+
+	public void setResumeDetail(ResumeDetail resumeDetail) {
+		this.resumeDetail = resumeDetail;
 	}
 }

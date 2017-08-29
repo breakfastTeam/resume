@@ -42,9 +42,14 @@ public class ResumeDetail extends BaseEntity implements java.io.Serializable {
 	private double hopeSalaryHigh;//最高薪资标准
 	private String face;            //政治面貌
 	private String hunyin;          //婚姻状态
+
+	@Transient
 	private List<ResumeDetailEducationExperience> resumeDetailEducationExperiences;
+	@Transient
 	private List<ResumeDetailProjectExperience> resumeDetailProjectExperiences;
+	@Transient
 	private List<ResumeDetailSkills> resumeDetailSkills;
+	@Transient
 	private List<ResumeDetailWorkExperience> resumeDetailWorkExperiences;
 
 
@@ -278,6 +283,7 @@ public class ResumeDetail extends BaseEntity implements java.io.Serializable {
 		this.hunyin = hunyin;
 	}
 
+	@Transient
 	public List<ResumeDetailEducationExperience> getResumeDetailEducationExperiences() {
 		return resumeDetailEducationExperiences;
 	}
@@ -286,6 +292,7 @@ public class ResumeDetail extends BaseEntity implements java.io.Serializable {
 		this.resumeDetailEducationExperiences = resumeDetailEducationExperiences;
 	}
 
+	@Transient
 	public List<ResumeDetailProjectExperience> getResumeDetailProjectExperiences() {
 		return resumeDetailProjectExperiences;
 	}
@@ -294,6 +301,7 @@ public class ResumeDetail extends BaseEntity implements java.io.Serializable {
 		this.resumeDetailProjectExperiences = resumeDetailProjectExperiences;
 	}
 
+	@Transient
 	public List<ResumeDetailSkills> getResumeDetailSkills() {
 		return resumeDetailSkills;
 	}
@@ -302,6 +310,7 @@ public class ResumeDetail extends BaseEntity implements java.io.Serializable {
 		this.resumeDetailSkills = resumeDetailSkills;
 	}
 
+	@Transient
 	public List<ResumeDetailWorkExperience> getResumeDetailWorkExperiences() {
 		return resumeDetailWorkExperiences;
 	}

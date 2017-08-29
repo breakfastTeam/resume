@@ -47,7 +47,7 @@ public class ResumeDetailProjectExperience extends BaseEntity implements java.io
 		this.startTime = startTime;
 	}
 
-	@Column(name = "start_time")
+	@Column(name = "end_time")
 	public DateTime getEndTime() {
 		return endTime;
 	}

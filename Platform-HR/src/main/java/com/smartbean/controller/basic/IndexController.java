@@ -38,4 +38,28 @@ public class IndexController {
         return mv;
     }
 
+    @RequestMapping(value = {"/resume"})
+    public ModelAndView resumes() {
+        ModelAndView mv = new ModelAndView();
+
+        mv.setViewName("views/resume");
+        return mv;
+    }
+
+    @RequestMapping(value = {"/company"})
+    public ModelAndView company() {
+        ModelAndView mv = new ModelAndView();
+
+        mv.setViewName("views/company");
+        return mv;
+    }
+
+    @RequestMapping(value = {"/position"})
+    public ModelAndView position() {
+        ModelAndView mv = new ModelAndView();
+
+        mv.setViewName("views/position");
+        return mv;
+    }
+
 }
