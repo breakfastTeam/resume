@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/resume.iml" filepath="$PROJECT_DIR$/.idea/resume.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Biz-Basic/Biz-Basic.iml" filepath="$PROJECT_DIR$/Biz-Basic/Biz-Basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Biz-Resume/Biz-Resume.iml" filepath="$PROJECT_DIR$/Biz-Resume/Biz-Resume.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core-Common/Core-Common.iml" filepath="$PROJECT_DIR$/Core-Common/Core-Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Platform-Client/Platform-Client.iml" filepath="$PROJECT_DIR$/Platform-Client/Platform-Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Platform-HR/Platform-HR.iml" filepath="$PROJECT_DIR$/Platform-HR/Platform-HR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Platform-Manage/Platform-Manage.iml" filepath="$PROJECT_DIR$/Platform-Manage/Platform-Manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resume.iml" filepath="$PROJECT_DIR$/resume.iml" />
     </modules>
   </component>
 </project>

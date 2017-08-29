@@ -1,0 +1,98 @@
+<div class="page page-table">
+    <section class="panel panel-default table-dynamic">
+            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>简历信息</strong></div>
+        <form>
+            <div class="table-filters">
+                <div class="row form-group">
+
+                    <div class="col-sm-2">
+                        <input type="text" placeholder="期望职位描述" ng-model="resume.hopePositionDesc" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="table-filters">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <button type="submit" ng-click="search()" class="btn btn-primary btn-w-md">搜索</button>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-bordered table-striped table-responsive">
+                <thead>
+                <tr>
+                    <th>
+                        <div class="th">
+                            序号
+                        </div>
+                    </th>
+                    <th>
+                        <div class="th">
+                            姓名
+                        </div>
+                    </th>
+                    <th>
+                        <div class="th">
+                            性别
+                        </div>
+                    </th>
+                    <th>
+                        <div class="th">年龄</div>
+                    </th>
+                    <th>
+                        <div class="th">
+                            学历
+                        </div>
+                    </th>
+                    <th>
+                        <div class="th">
+                            职位
+                        </div>
+                    </th>
+                    <th>
+                        <div class="th">
+                            现居住地
+                        </div>
+                    </th>
+                    <th>
+                        <div class="th">
+                            更新时间
+                        </div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-if="resumes==''">
+                    <td colspan="6" class="text-center">暂无数据</td>
+                </tr>
+                <tr dir-paginate="resume in resumes | itemsPerPage: pageSize" total-items="total" ng-if="!resumes==''">
+                    <td>{{$index+1}}</td>
+                    <td>{{resume.content}}</td>
+                    <td>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <input type="hidden" ng-bind="{{currentPage}}"/>
+
+                </tbody>
+            </table>
+
+            <footer class="table-footer">
+                <div class="row">
+                    <div class="col-md-12 text-right pagination-container">
+                        <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>
+                    </div>
+                </div>
+            </footer>
+        </form>
+    </section>
+
+</div>

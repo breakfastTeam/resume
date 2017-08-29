@@ -1,0 +1,111 @@
+<#assign ctx = request.getContextPath() />
+
+<#macro head title charset="utf-8" lang="zh-CN">
+    <!doctype html>
+    <html class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta name="apple-touch-fullscreen" content="yes"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <title>${title}</title>
+
+        <link href="fonts/profession/style.css" rel="stylesheet" type="text/css">
+        <link href="libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="libraries/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" type="text/css">
+        <link href="libraries/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
+        <link href="libraries/bootstrap-wysiwyg/bootstrap-wysiwyg.min.css" rel="stylesheet" type="text/css">
+        <link href="css/profession-black-green.css" rel="stylesheet" type="text/css" id="style-primary">
+
+        <#nested/>
+    </head>
+    </html>
+</#macro>
+
+<#macro main>
+    <body class="hero-content-dark footer-dark">
+    <div class="page-wrapper">
+        <div class="header-wrapper">
+            <div class="header">
+                <div class="header-top">
+                    <div class="container">
+                        <div class="header-brand">
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <i class="profession profession-logo"></i>
+                                    <span class="header-logo-text">共享<span class="header-logo-highlight">.</span>简历</span>
+                                </a>
+                            </div><!-- /.header-logo-->
+
+                            <div class="header-slogan">
+                                <span class="header-slogan-slash">/</span>
+                                <span class="header-slogan-text">共享简历的原创者和领跑者</span>
+                            </div><!-- /.header-slogan-->
+                        </div><!-- /.header-brand -->
+
+                        <ul class="header-actions nav nav-pills">
+                            <li><a href="login.html">登录</a></li>
+                            <li><a href="registration.html">注册</a></li>
+                            <li><a href="create-resume.html" class="primary">创建简历</a></li>
+                        </ul><!-- /.header-actions -->
+                    </div><!-- /.container -->
+                </div><!-- /.header-top -->
+
+                <div class="header-bottom">
+                    <div class="container">
+                        <ul class="header-nav nav nav-pills collapse">
+                            <li class="active">
+                                <a href="index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="candidates.html">搜索简历</a>
+                            </li>
+                            <li>
+                                <a href="positions.html">推荐职位</a>
+                            </li>
+                            <li>
+                                <a href="companies.html">热门公司</a>
+                            </li>
+                        </ul>
+
+                        <div class="header-search hidden-sm">
+                            <form method="get" action="search">
+                                <input type="text" class="form-control" placeholder="快速搜索简历">
+                            </form>
+                        </div><!-- /.header-search -->
+                    </div><!-- /.container -->
+                </div><!-- /.header-bottom -->
+            </div><!-- /.header -->
+        </div><!-- /.header-wrapper-->
+        <#nested/>
+    </div>
+    </body>
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.ezmark.js"></script>
+
+    <script type="text/javascript" src="libraries/bootstrap-sass/javascripts/bootstrap/collapse.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap-sass/javascripts/bootstrap/dropdown.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap-sass/javascripts/bootstrap/tab.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap-sass/javascripts/bootstrap/transition.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap-wysiwyg/bootstrap-wysiwyg.min.js"></script>
+
+    <script type="text/javascript" src="libraries/cycle2/jquery.cycle2.min.js"></script>
+    <script type="text/javascript" src="libraries/cycle2/jquery.cycle2.carousel.min.js"></script>
+
+    <script type="text/javascript" src="libraries/countup/countup.min.js"></script>
+
+    <script type="text/javascript" src="js/profession.js"></script>
+
+    <script>
+        var ctx = "${ctx}";
+        var path = "${path}";
+        var param = "${param}";
+    </script>
+</#macro>

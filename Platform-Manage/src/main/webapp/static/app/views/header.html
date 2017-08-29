@@ -1,0 +1,67 @@
+<header class="top-header clearfix">
+    <!-- Logo -->
+    <div class="logo bg-info" style="background-color: #fff">
+        <a href="#/">
+
+            <!--<img src="images/bg-pattern/logo.png" style="height:70%;">-->
+        </a>
+    </div>
+
+    <div class="top-nav">
+
+        <ul class="nav-right list-unstyled">
+            <li class="dropdown text-normal nav-profile">
+                <a style="cursor:default" aria-haspopup="true"
+                   aria-expanded="false">
+
+                    <span class="hidden-xs">
+                        <span data-translate="LISA">管理平台</span>
+                    </span>
+                </a>
+
+            </li>
+            <li ng-if="unreadCount>0" class="dropdown" dropdown="">
+                <a href="#/message/chats" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="ti-email"></i>
+                    <span style="background-color: #ff0000;color: #ffffff" class="badge badge-danger">
+                       {{unreadCount}}</span>
+                </a>
+            </li>
+        </ul>
+
+
+        <ul class="nav-right pull-right list-unstyled">
+            <li class="dropdown">
+                <a href="javascript:;" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    <img src="{{path}}" alt="" class="img-circle img30_30">
+
+                    <span class="hidden-xs">
+                        <span data-translate="LISA">{{userName}}</span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu with-arrow pull-right">
+                    <li>
+                        <a href ng-click="goToMyProfile(userId)">
+                            <i class="ti-user"></i>
+                            <span data-translate="MY_PROFILE" class="ng-scope">我的资料</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href ng-click="goToMyEditPassWord(userId)">
+                            <i class="ti-check-box"></i>
+                            <span data-translate="MY_TASKS">修改密码</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="loginOut">
+                            <i class="ti-export"></i>
+                            <span>退出</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>

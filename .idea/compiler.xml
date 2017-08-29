@@ -17,7 +17,57 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for Platform-Client" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Platform-Client" />
+      </profile>
+      <profile default="false" name="Annotation profile for Core-Common" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Core-Common" />
+      </profile>
+      <profile default="false" name="Annotation profile for Biz-Resume" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Biz-Resume" />
+      </profile>
+      <profile default="false" name="Annotation profile for Platform-Manage" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Platform-Manage" />
+      </profile>
+      <profile default="false" name="Annotation profile for Platform-HR" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Platform-HR" />
+      </profile>
+      <profile default="false" name="Annotation profile for Biz-Basic" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="Biz-Basic" />
+      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="Biz-Basic" target="1.8" />
+      <module name="Biz-Resume" target="1.8" />
+      <module name="Core-Common" target="1.8" />
+      <module name="Platform-Client" target="1.8" />
+      <module name="Platform-HR" target="1.8" />
+      <module name="Platform-Manage" target="1.8" />
+      <module name="resume" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
