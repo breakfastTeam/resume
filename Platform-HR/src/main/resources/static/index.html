@@ -1,0 +1,459 @@
+<#include "common.html"/>
+<@head title="共享简历，原创者和领跑者！">
+
+</@head>
+<@main>
+    <div class="main-wrapper">
+        <div class="main">
+            <div class="hero-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                            <h1>简历, 每天都免费<br> 简历, 每天都赚钱</h1>
+                            <h2>共享简历........</h2>
+
+                            <a href="create-resume.html" class="hero-content-action">上传简历</a>
+                        </div><!-- /.col-* -->
+
+                        <div class="col-sm-6 col-md-5 col-md-offset-1">
+                            <div class="hero-content-carousel">
+                                <h2>最新动态</h2>
+
+                                <ul class="cycle-slideshow vertical"
+                                    data-cycle-fx="carousel"
+                                    data-cycle-slides="li"
+                                    data-cycle-carousel-visible="7"
+                                    data-cycle-carousel-vertical="true">
+                                    <#if (dynamics?size>0)>
+                                        <#list dynamics![] as dynamic>
+                                            <li>${dynamic.content}</li>
+                                        </#list>
+                                        <#else>
+                                            <li>暂无动态信息</li>
+                                    </#if>
+                                </ul>
+                            </div><!-- /.hero-content-content -->
+                        </div><!-- /.col-* -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.hero-content -->
+
+
+            <div class="stats">
+                <div class="container">
+                    <div class="row">
+                        <div class="stat-item col-sm-4" id="totalResumes" data-to="${resumeCount.totalResumes}">
+                            <strong id="stat-item-1">0</strong>
+                            <span>简历封数</span>
+                        </div><!-- /.col-* -->
+
+                        <div class="stat-item col-sm-4" id="totalVIPs" data-to="${resumeCount.totalVIPs}">
+                            <strong id="stat-item-2">0</strong>
+                            <span>会员人数</span>
+                        </div><!-- /.col-* -->
+
+                        <div class="stat-item col-sm-4" id="totalCompanies" data-to="${resumeCount.totalCompanies}">
+                            <strong id="stat-item-3">0</strong>
+                            <span>职位个数</span>
+                        </div><!-- /.col-* -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.stats -->
+
+            <div class="container">
+                <div class="filter">
+                    <h2>搜索简历</h2>
+                    <form method="get" action="">
+                        <div class="row" style="margin-bottom: 15px;">
+                            <div class="form-group col-sm-5">
+                                <select class="form-control" title="所在地址">
+                                    <option value="">北京</option>
+                                    <option value="">上海</option>
+                                </select>
+                            </div><!-- /.form-group -->
+
+                            <div class="form-group col-sm-5">
+                                <select class="form-control" title="工作经验">
+                                    <option value="">实习生</option>
+                                    <option value="">1~2年经验</option>
+                                    <option value="">3~5年经验</option>
+                                    <option value="">6~9年经验</option>
+                                    <option value="">10年以上</option>
+
+                                </select>
+                            </div><!-- /.form-group -->
+                            <div class="form-group col-sm-2">
+                                <button type="submit" class="btn btn-block btn-secondary">搜索</button>
+                            </div><!-- /.form-group -->
+
+                        </div><!-- /.row -->
+                    </form>
+                </div><!-- /.filter -->
+
+
+
+                <div class="block background-secondary fullwidth candidate-title">
+                    <div class="page-title">
+                        <h2>推荐人才</h2>
+
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p>
+                                    给您最有价值的简历, 让您每天节省1小时
+                                </p>
+                            </div><!-- /.col-* -->
+                        </div><!-- /.row -->
+                    </div><!-- /.page-title -->
+                </div><!-- /.fullwidth -->
+
+                <div class="row mt-60">
+
+
+                    <div class="candidate-boxes">
+
+
+                        <div class="col-sm-3 col-md-2">
+                            <div class="candidate-box">
+                                <div class="candidate-box-image">
+                                    <a href="resume.html">
+                                        <img src="img/tmp/resume-1.jpg" alt="Peter Ruck">
+                                    </a>
+                                </div><!-- /.candidate-box-image -->
+
+                                <div class="candidate-box-content">
+                                    <h2>Peter Ruck</h2>
+                                    <h3>Java Developer</h3>
+                                </div><!-- /.candidate-box-content -->
+                            </div><!-- /.candidate-box -->
+                        </div><!-- /.col-* -->
+
+
+                        <div class="col-sm-3 col-md-2">
+                            <div class="candidate-box">
+                                <div class="candidate-box-image">
+                                    <a href="resume.html">
+                                        <img src="img/tmp/resume-2.jpg" alt="Linda Young">
+                                    </a>
+                                </div><!-- /.candidate-box-image -->
+
+                                <div class="candidate-box-content">
+                                    <h2>Linda Young</h2>
+                                    <h3>PR Manager</h3>
+                                </div><!-- /.candidate-box-content -->
+                            </div><!-- /.candidate-box -->
+                        </div><!-- /.col-* -->
+
+
+                        <div class="col-sm-3 col-md-2">
+                            <div class="candidate-box">
+                                <div class="candidate-box-image">
+                                    <a href="resume.html">
+                                        <img src="img/tmp/resume-3.jpg" alt="Britney Doe">
+                                    </a>
+                                </div><!-- /.candidate-box-image -->
+
+                                <div class="candidate-box-content">
+                                    <h2>Britney Doe</h2>
+                                    <h3>Data Mining</h3>
+                                </div><!-- /.candidate-box-content -->
+                            </div><!-- /.candidate-box -->
+                        </div><!-- /.col-* -->
+
+
+                        <div class="col-sm-3 col-md-2">
+                            <div class="candidate-box">
+                                <div class="candidate-box-image">
+                                    <a href="resume.html">
+                                        <img src="img/tmp/resume-4.jpg" alt="Andrew Man">
+                                    </a>
+                                </div><!-- /.candidate-box-image -->
+
+                                <div class="candidate-box-content">
+                                    <h2>Andrew Man</h2>
+                                    <h3>Python Developer</h3>
+                                </div><!-- /.candidate-box-content -->
+                            </div><!-- /.candidate-box -->
+                        </div><!-- /.col-* -->
+
+
+                        <div class="col-sm-3 col-md-2">
+                            <div class="candidate-box">
+                                <div class="candidate-box-image">
+                                    <a href="resume.html">
+                                        <img src="img/tmp/resume.jpg" alt="Elliot Sarah Scott">
+                                    </a>
+                                </div><!-- /.candidate-box-image -->
+
+                                <div class="candidate-box-content">
+                                    <h2>Elliot Sarah Scott</h2>
+                                    <h3>Data Analytist</h3>
+                                </div><!-- /.candidate-box-content -->
+                            </div><!-- /.candidate-box -->
+                        </div><!-- /.col-* -->
+
+
+                        <div class="col-sm-3 col-md-2">
+                            <div class="candidate-box">
+                                <div class="candidate-box-image">
+                                    <a href="resume.html">
+                                        <img src="img/tmp/resume-1.jpg" alt="Peter Ruck">
+                                    </a>
+                                </div><!-- /.candidate-box-image -->
+
+                                <div class="candidate-box-content">
+                                    <h2>Peter Ruck</h2>
+                                    <h3>Java Developer</h3>
+                                </div><!-- /.candidate-box-content -->
+                            </div><!-- /.candidate-box -->
+                        </div><!-- /.col-* -->
+
+                    </div><!-- /.candidate-boxes -->
+                </div><!-- /.row -->
+                <hr/>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="page-header">热门企业</h2>
+                        <div class="companies-list">
+                            <div class="companies-list-item">
+                                <div class="companies-list-item-image">
+                                    <a href="company-detail.html">
+                                        <img src="img/tmp/airbnb.png" alt="">
+                                    </a>
+                                </div><!-- /.companies-list-item-image -->
+
+                                <div class="companies-list-item-heading">
+                                    <h2><a href="company-detail.html">Airbnb</a></h2>
+                                    <h3>New York City, New York</h3>
+                                </div><!-- /.companies-list-item-heading -->
+
+                                <div class="companies-list-item-count">
+                                    <a href="positions.html">3个职位</a>
+                                </div><!-- /.positions-list-item-count -->
+                            </div><!-- /.companies-list-item -->
+
+
+                            <div class="companies-list-item">
+                                <div class="companies-list-item-image">
+                                    <a href="company-detail.html">
+                                        <img src="img/tmp/instagram.png" alt="">
+                                    </a>
+                                </div><!-- /.companies-list-item-image -->
+
+                                <div class="companies-list-item-heading">
+                                    <h2><a href="company-detail.html">Instagram</a></h2>
+                                    <h3>Chicago, Michigan</h3>
+                                </div><!-- /.companies-list-item-heading -->
+
+                                <div class="companies-list-item-count">
+                                    <a href="positions.html">32个职位</a>
+                                </div><!-- /.positions-list-item-count -->
+
+                            </div><!-- /.companies-list-item -->
+
+
+                            <div class="companies-list-item">
+                                <div class="companies-list-item-image">
+                                    <a href="company-detail.html">
+                                        <img src="img/tmp/facebook.png" alt="">
+                                    </a>
+                                </div><!-- /.companies-list-item-image -->
+
+                                <div class="companies-list-item-heading">
+                                    <h2><a href="company-detail.html">Facebook</a></h2>
+                                    <h3>Philadelphia, Pennsylvania</h3>
+                                </div><!-- /.companies-list-item-heading -->
+
+                                <div class="companies-list-item-count">
+                                    <a href="positions.html">34个职位</a>
+                                </div><!-- /.positions-list-item-count -->
+
+                            </div><!-- /.companies-list-item -->
+
+
+                            <div class="companies-list-item">
+                                <div class="companies-list-item-image">
+                                    <a href="company-detail.html">
+
+                                        <img src="img/tmp/twitter.png" alt="">
+
+                                    </a>
+                                </div><!-- /.companies-list-item-image -->
+
+                                <div class="companies-list-item-heading">
+                                    <h2><a href="company-detail.html">Twitter</a></h2>
+                                    <h3>Denver, Colorado</h3>
+                                </div><!-- /.companies-list-item-heading -->
+
+                                <div class="companies-list-item-count">
+                                    <a href="positions.html">4个职位</a>
+                                </div><!-- /.positions-list-item-count -->
+
+                            </div><!-- /.companies-list-item -->
+
+
+                            <div class="companies-list-item">
+                                <div class="companies-list-item-image">
+                                    <a href="company-detail.html">
+
+                                        <img src="img/tmp/dropbox.png" alt="">
+
+                                    </a>
+                                </div><!-- /.companies-list-item-image -->
+
+                                <div class="companies-list-item-heading">
+                                    <h2><a href="company-detail.html">Dropbox</a></h2>
+                                    <h3>San Francisco, California</h3>
+                                </div><!-- /.companies-list-item-heading -->
+
+                                <div class="companies-list-item-count">
+                                    <a href="positions.html">4个职位</a>
+                                </div><!-- /.positions-list-item-count -->
+
+                            </div><!-- /.companies-list-item -->
+
+                        </div><!-- /.companies-list -->
+                    </div><!-- /.col-* -->
+
+                    <div class="col-sm-6">
+                        <h2 class="page-header">最新职位</h2>
+                        <div class="positions-list">
+                            <div class="positions-list-item">
+                                <h2>
+                                    <a href="position-detail.html">Junior Java Developer</a>
+
+                                </h2>
+                                <h3><span><img src="img/tmp/instagram.png" alt=""></span> New York City, New York
+                                    <br></h3>
+
+                                <div class="position-list-item-date">09/11/2015</div><!-- /.position-list-item-date -->
+                                <div class="position-list-item-action"><a href="index.html#">Save Position</a></div>
+                                <!-- /.position-list-item-action -->
+                            </div><!-- /.position-list-item -->
+
+
+                            <div class="positions-list-item">
+                                <h2>
+                                    <a href="position-detail.html">PR Manager</a>
+
+                                    <span>Urgent</span>
+
+                                </h2>
+                                <h3><span><img src="img/tmp/facebook.png" alt=""></span> Chicago, Michigan <br>
+                                </h3>
+
+                                <div class="position-list-item-date">08/11/2015</div><!-- /.position-list-item-date -->
+                                <div class="position-list-item-action"><a href="index.html#">Save Position</a></div>
+                                <!-- /.position-list-item-action -->
+                            </div><!-- /.position-list-item -->
+
+
+                            <div class="positions-list-item">
+                                <h2>
+                                    <a href="position-detail.html">Data Mining Specialist</a>
+
+                                </h2>
+                                <h3><span><img src="img/tmp/twitter.png" alt=""></span> Philadelphia,
+                                    Pennsylvania <br></h3>
+
+                                <div class="position-list-item-date">07/11/2015</div><!-- /.position-list-item-date -->
+                                <div class="position-list-item-action"><a href="index.html#">Save Position</a></div>
+                                <!-- /.position-list-item-action -->
+                            </div><!-- /.position-list-item -->
+
+
+                            <div class="positions-list-item">
+                                <h2>
+                                    <a href="position-detail.html">Python Developer</a>
+
+                                    <span>Featured</span>
+
+                                </h2>
+                                <h3><span><img src="img/tmp/airbnb.png" alt=""></span> Denver, Colorado <br></h3>
+
+                                <div class="position-list-item-date">06/11/2015</div><!-- /.position-list-item-date -->
+                                <div class="position-list-item-action"><a href="index.html#">Save Position</a></div>
+                                <!-- /.position-list-item-action -->
+                            </div><!-- /.position-list-item -->
+
+
+                            <div class="positions-list-item">
+                                <h2>
+                                    <a href="position-detail.html">Senior Data</a>
+
+                                    <span>Featured</span>
+
+                                </h2>
+                                <h3><span><img src="img/tmp/dropbox.png" alt=""></span> San Francisco, Dropbox
+                                    <br></h3>
+
+                                <div class="position-list-item-date">05/11/2015</div><!-- /.position-list-item-date -->
+                                <div class="position-list-item-action"><a href="index.html#">Save Position</a></div>
+                                <!-- /.position-list-item-action -->
+                            </div><!-- /.position-list-item -->
+
+                        </div><!-- /.positions-list -->
+                    </div><!-- /.col-* -->
+                </div><!-- /.row -->
+
+
+                <div class="panels-highlighted">
+                    <div class="row">
+                        <div class="panel-highlighted-wrapper col-sm-6">
+                            <div class="panel-highlighted-inner panel-highlighted-secondary">
+                                <h2>公司注册</h2>
+
+                                <p>
+                                    Vivamus congue rhoncus sem et placerat. Fusce nec nunc lobortis lorem ultrices
+                                    facilisis. Ut dapibus blandit nunc, et consectetur dui.
+                                </p>
+
+                                <a href="registration.html" class="btn btn-white">Sign up as company</a>
+                            </div><!-- /.panel-inner -->
+                        </div><!-- /.panel-wrapper -->
+
+                        <div class="panel-highlighted-wrapper col-sm-6">
+                            <div class="panel-highlighted-inner panel-highlighted-primary panel">
+                                <h2>个人注册</h2>
+
+                                <p>
+                                    Vivamus congue rhoncus sem et placerat. Fusce nec nunc lobortis lorem ultrices
+                                    facilisis. Ut dapibus blandit nunc, et consectetur dui.
+                                </p>
+
+                                <a href="registration.html" class="btn btn-white">Sign up as employee</a>
+                            </div><!-- /.panel-inner -->
+                        </div><!-- /.panel-wrapper -->
+                    </div><!-- /.row-->
+                </div><!-- /.panels -->
+
+
+
+
+                <div class="partners">
+                    <a href="index.html#">
+                        <img src="img/tmp/partner-1.jpg" alt="">
+                    </a>
+
+                    <a href="index.html#">
+                        <img src="img/tmp/partner-2.jpg" alt="">
+                    </a>
+
+                    <a href="index.html#">
+                        <img src="img/tmp/partner-3.jpg" alt="">
+                    </a>
+
+                    <a href="index.html#">
+                        <img src="img/tmp/partner-4.jpg" alt="">
+                    </a>
+
+                    <a href="index.html#">
+                        <img src="img/tmp/partner-5.jpg" alt="">
+                    </a>
+                </div><!-- /.partners -->
+
+            </div><!-- /.container -->
+
+        </div><!-- /.main -->
+    </div><!-- /.main-wrapper -->
+</@main>
+<script src="scripts/index.js"></script>

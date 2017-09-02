@@ -59,7 +59,7 @@
         <property name="packagesToScan" value="com.smartbean.entity" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-                <property name="generateDdl" value="false" />
+                <property name="generateDdl" value="true" />
                 <property name="database" value="MYSQL" />
                 <property name="showSql" value="true" />
             </bean>
