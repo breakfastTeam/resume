@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 /**
  * Created by qingfeilee on 2015/5/13.
  */
-public interface ResumeCountRepository extends JpaRepository<SysResumeCount, String> {
+public interface ResumeCountRepository extends JpaRepository<SysResumeCount, Long> {
 }

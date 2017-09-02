@@ -11,9 +11,5 @@ import java.util.List;
  */
 public interface ResumeService {
 
-    public Resume findOne(String id);
-
-    public Page<Resume> find(Resume resume, Pageable pageable);
-
-    public List<Resume> findAll(Resume resume);
+    public Resume findOne(Long id);
 }

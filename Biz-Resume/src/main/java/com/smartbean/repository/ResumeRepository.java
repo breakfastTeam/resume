@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 /**
  * Created by qingfeilee on 2015/4/17.
  */
-public interface ResumeRepository extends JpaRepository<Resume, String>, JpaSpecificationExecutor<Resume> {
+public interface ResumeRepository extends JpaRepository<Resume, Long>, JpaSpecificationExecutor<Resume> {
 
 }

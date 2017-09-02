@@ -15,7 +15,7 @@ public interface LoginService {
     /**
      * 根据登录主键获取登录账号
      * **/
-    public SysLogin findOne(String loginId);
+    public SysLogin findOne(Long loginId);
 
 
     /**

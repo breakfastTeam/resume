@@ -24,7 +24,7 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    public SysLogin findOne(String loginId) {
+    public SysLogin findOne(Long loginId) {
         return loginRepository.findOne(loginId);
     }
 

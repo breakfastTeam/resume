@@ -23,6 +23,7 @@ public class ResumeDetail extends BaseEntity {
 
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private Long userId; // 简历所属人
 	private String name;   //姓名
 	private String mobile; //电话
 	private String email;  //电子邮件
