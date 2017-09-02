@@ -48,6 +48,6 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public SysLogin findFirstByUserId(Long userId) {
-        return loginRepository.findFirstByUserId(userId);
+        return loginRepository.findById(userId);
     }
 }
