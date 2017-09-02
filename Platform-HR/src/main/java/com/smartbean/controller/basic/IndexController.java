@@ -2,13 +2,11 @@ package com.smartbean.controller.basic;
 
 import com.smartbean.entity.SysDynamic;
 import com.smartbean.entity.SysResumeCount;
-import com.smartbean.fastjson.JsonResult;
 import com.smartbean.service.DynamicService;
 import com.smartbean.service.ResumeCountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;

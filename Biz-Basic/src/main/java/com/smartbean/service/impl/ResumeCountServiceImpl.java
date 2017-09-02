@@ -1,9 +1,7 @@
 package com.smartbean.service.impl;
 
-import com.smartbean.entity.SysLogin;
 import com.smartbean.entity.SysResumeCount;
 import com.smartbean.repository.ResumeCountRepository;
-import com.smartbean.service.LoginService;
 import com.smartbean.service.ResumeCountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

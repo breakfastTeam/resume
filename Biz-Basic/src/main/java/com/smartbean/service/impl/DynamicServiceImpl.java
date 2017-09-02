@@ -1,10 +1,8 @@
 package com.smartbean.service.impl;
 
 import com.smartbean.entity.SysDynamic;
-import com.smartbean.entity.SysResumeCount;
 import com.smartbean.repository.DynamicRepository;
 import com.smartbean.service.DynamicService;
-import com.smartbean.service.ResumeCountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

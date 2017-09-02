@@ -1,11 +1,8 @@
 package com.smartbean.dao.impl;
 
-import com.google.common.collect.Lists;
 import com.smartbean.dao.ResumeDao;
-
 import com.smartbean.entity.Resume;
 import com.smartbean.repository.ResumeRepository;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,9 +14,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 

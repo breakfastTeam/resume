@@ -1,31 +1,14 @@
 package com.smartbean.controller.resume;
 
-import com.alibaba.fastjson.JSONObject;
-import com.smartbean.entity.Resume;
 import com.smartbean.entity.ResumeDetail;
-import com.smartbean.entity.SysDynamic;
-import com.smartbean.entity.SysResumeCount;
-import com.smartbean.fastjson.FastJson;
-import com.smartbean.fastjson.JsonResult;
 import com.smartbean.service.ResumeDetailService;
-import com.smartbean.service.ResumeService;
-import com.smartbean.utils.StringUtils;
-import org.joda.time.DateTime;
+import com.smartbean.utils.JsonResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Created by qingfeilee on 2015/4/18.
@@ -38,7 +21,9 @@ public class ResumeController {
     @Autowired
     ResumeDetailService resumeDetailService;
 
-
+    public JsonResult create(@ModelAttribute ResumeDetail resumeDetail) {
+        return JsonResult.success();
+    }
 
 
 

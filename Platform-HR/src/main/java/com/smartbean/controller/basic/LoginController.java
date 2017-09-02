@@ -1,22 +1,17 @@
 package com.smartbean.controller.basic;
 
-import com.smartbean.constants.Constants;
-import com.smartbean.entity.Resume;
 import com.smartbean.entity.SysLogin;
-import com.smartbean.fastjson.FastJson;
-import com.smartbean.fastjson.JsonResult;
 import com.smartbean.service.LoginService;
-import com.smartbean.utils.StringUtils;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.session.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpSession;
 
 /**
  * Created by felix on 8/19/17.
@@ -30,7 +25,7 @@ public class LoginController {
 
     @ResponseBody
     @RequestMapping(value = "/login")
-    public ModelAndView findOne(@RequestParam String loginName, @RequestParam String password, HttpSession session){
+    public ModelAndView findOne(@RequestParam String loginName, @RequestParam String password, Session session){
 
         ModelAndView mv = new ModelAndView();
 

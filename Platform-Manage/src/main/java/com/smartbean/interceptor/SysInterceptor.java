@@ -1,15 +1,11 @@
 package com.smartbean.interceptor;
 
-import com.smartbean.constants.Constants;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * Created by qingfeilee on 2015/4/21.

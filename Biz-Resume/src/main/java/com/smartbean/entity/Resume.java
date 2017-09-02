@@ -1,16 +1,14 @@
 package com.smartbean.entity;
 
-import com.smartbean.entity.base.BaseEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.*;
+import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
-import javax.persistence.*;
 import javax.persistence.Entity;
-import javax.persistence.Parameter;
-import javax.persistence.Table;
-import java.util.Date;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * ShopInfo entity.

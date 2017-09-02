@@ -1,6 +1,5 @@
 package com.smartbean.repository;
 
-import com.smartbean.entity.SysLogin;
 import com.smartbean.entity.SysResumeCount;
 import org.springframework.data.jpa.repository.JpaRepository;
 
