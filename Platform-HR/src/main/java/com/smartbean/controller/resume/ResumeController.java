@@ -8,9 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -25,7 +24,15 @@ public class ResumeController {
     @Autowired
     private ResumeDetailService resumeDetailService;
 
-    @RequestMapping("/create")
+    @GetMapping("/create")
+    public ModelAndView create() {
+        ModelAndView mv = new ModelAndView();
+
+        mv.setViewName("views/createResume");
+        return mv;
+    }
+
+    @PostMapping("/create")
     @ResponseBody
     public JsonResult create(@ModelAttribute ResumeDetail resumeDetail) {
         ResumeDetail saved = resumeDetailService.save(resumeDetail);

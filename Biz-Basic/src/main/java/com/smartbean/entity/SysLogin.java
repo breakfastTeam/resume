@@ -20,7 +20,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class SysLogin extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String email;
     private String mobilePhone;

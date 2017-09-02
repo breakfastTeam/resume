@@ -21,7 +21,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class SysDynamic extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String content;
 }

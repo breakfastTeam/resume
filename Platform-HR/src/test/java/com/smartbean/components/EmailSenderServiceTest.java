@@ -1,7 +1,6 @@
 package com.smartbean.components;
 
-import com.alibaba.fastjson.JSON;
-import com.smartbean.config.EmailSendConfig;
+import com.smartbean.config.EmailSendProperties;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +23,13 @@ public class EmailSenderServiceTest {
     @Autowired
     private EmailSenderService emailSenderService;
     @Autowired
-    private EmailSendConfig emailSendConfig;
+    private EmailSendProperties emailSendProperties;
 
     @Test
     public void sendRegisterCodeEmail() {
         String xsmtpapi = new EmailParamBuild("zhaolongkai2012@163.com", "kkk", "abc123").toString();
         System.out.println(xsmtpapi);
-        System.out.println(emailSendConfig.getFromName());
+        System.out.println(emailSendProperties.getFromName());
         Call<EmailSendResult> test = emailSenderService.sendRegisterCodeEmail(EmailParamBuild.Template.VERIFICATION_CODE_EMAIL.name(), xsmtpapi);
         try {
             Response<EmailSendResult> execute = test.execute();

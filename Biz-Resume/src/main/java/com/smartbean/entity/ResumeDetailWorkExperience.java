@@ -21,7 +21,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class ResumeDetailWorkExperience extends BaseEntity {
 
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Long resumeDetailId;
 	private String companyName;//公司名称

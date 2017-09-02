@@ -21,7 +21,7 @@ public class ResumeDetail extends BaseEntity {
 
 	// Fields
 
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Long userId; // 简历所属人
 	private String name;   //姓名

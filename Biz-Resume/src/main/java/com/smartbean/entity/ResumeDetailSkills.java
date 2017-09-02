@@ -19,7 +19,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class ResumeDetailSkills extends BaseEntity {
 
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Long resumeDetailId;
 	private String skillName;

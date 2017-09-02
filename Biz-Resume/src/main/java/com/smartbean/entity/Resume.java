@@ -20,7 +20,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Resume implements java.io.Serializable {
 
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String content;
 

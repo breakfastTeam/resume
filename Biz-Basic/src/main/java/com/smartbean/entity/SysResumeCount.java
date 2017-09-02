@@ -20,7 +20,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class SysResumeCount extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer totalResumes;
     private Integer totalVIPs;

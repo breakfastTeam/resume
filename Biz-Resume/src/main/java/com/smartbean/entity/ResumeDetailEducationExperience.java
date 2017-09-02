@@ -21,7 +21,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class ResumeDetailEducationExperience extends BaseEntity {
 
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Long resumeDetailId;
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime",
