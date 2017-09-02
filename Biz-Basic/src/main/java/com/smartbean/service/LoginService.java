@@ -33,4 +33,6 @@ public interface LoginService {
      * 2015/5/12
      */
     public boolean isLoginNameExist(String loginName);
+
+    SysLogin findFirstByUserId(Long userId);
 }

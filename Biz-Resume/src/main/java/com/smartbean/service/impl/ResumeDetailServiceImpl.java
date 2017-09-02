@@ -2,7 +2,9 @@ package com.smartbean.service.impl;
 
 import com.smartbean.dtos.SearchParam;
 import com.smartbean.entity.ResumeDetail;
+import com.smartbean.enums.CreditOperate;
 import com.smartbean.repository.*;
+import com.smartbean.service.CreditRecordService;
 import com.smartbean.service.ResumeDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +27,8 @@ public class ResumeDetailServiceImpl implements ResumeDetailService {
     private ResumeDetailSkillsRepository resumeDetailSkillsRepository;
     @Autowired
     private ResumeDetailWorkExperienceRepository resumeDetailWorkExperienceRepository;
+    @Autowired
+    private CreditRecordService creditRecordService;
 
 
     @Override
@@ -56,7 +60,9 @@ public class ResumeDetailServiceImpl implements ResumeDetailService {
                     entity.setResumeDetailId(resumeDetailId);
                     resumeDetailWorkExperienceRepository.save(entity);
                 });
-
+        if (resumeDetail.getUserId() != null) {
+            creditRecordService.save(resumeDetail.getUserId(), CreditOperate.CREATE);
+        }
         return saved;
     }
 

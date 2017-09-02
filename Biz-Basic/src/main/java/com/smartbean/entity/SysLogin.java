@@ -26,4 +26,5 @@ public class SysLogin extends BaseEntity {
     private String mobilePhone;
     private String loginName;
     private String password;
+    private Integer credit;
 }

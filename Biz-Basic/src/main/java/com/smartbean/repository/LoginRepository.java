@@ -13,4 +13,6 @@ public interface LoginRepository extends JpaRepository<SysLogin, Long> {
     public SysLogin findByLoginNameAndPassword(String loginName, String password);
 
     public SysLogin findById(Long loginId);
+
+    SysLogin findFirstByUserId(Long userId);
 }

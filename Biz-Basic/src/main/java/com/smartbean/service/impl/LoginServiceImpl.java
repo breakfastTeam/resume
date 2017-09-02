@@ -2,6 +2,7 @@ package com.smartbean.service.impl;
 
 import com.smartbean.entity.SysLogin;
 import com.smartbean.repository.LoginRepository;
+import com.smartbean.service.CreditRecordService;
 import com.smartbean.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,8 @@ public class LoginServiceImpl implements LoginService {
 
     @Autowired(required = false)
     private LoginRepository loginRepository;
+    @Autowired
+    private CreditRecordService creditRecordService;
 
     @Override
     public SysLogin login(String loginName, String password) {
@@ -41,5 +44,10 @@ public class LoginServiceImpl implements LoginService {
         }else{
             return false;
         }
+    }
+
+    @Override
+    public SysLogin findFirstByUserId(Long userId) {
+        return loginRepository.findFirstByUserId(userId);
     }
 }

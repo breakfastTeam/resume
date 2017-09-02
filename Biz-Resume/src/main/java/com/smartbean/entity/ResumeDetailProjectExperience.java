@@ -17,7 +17,6 @@ import javax.persistence.Id;
  * @author MyEclipse Persistence Tools
  */
 @Entity
-
 @Data
 @NoArgsConstructor
 public class ResumeDetailProjectExperience extends BaseEntity {
